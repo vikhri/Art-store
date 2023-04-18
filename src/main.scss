@@ -1,5 +1,7 @@
+@import url("scss/fonts.scss");
+
 $font-size: 1rem;
-$font-color: lch(28 99 35);
+$font-color: green;
 
 html {
   font-size: $font-size;
@@ -7,5 +9,9 @@ html {
 }
 
 .paragraph {
-  background-image: url("./images/image.png");
+  font-family: 'Merriweather';
+  font-size: 30px;
+  font-weight: 700;
+  color: black;
+
 }
