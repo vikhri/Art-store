@@ -1,3 +1,11 @@
+$tablet-width: 1280px;
+$tablet-width: 1280px;
+$tablet-s-width: 1024px;
+$tablet-xs-width: 768px;
+
+$mobile-width: 480px;
+$mobile-s-width: 360px;
+
 * {
   margin: 0;
   padding: 0;
@@ -16,6 +24,10 @@ html {
 .wrapper {
   max-width: 1220px;
   margin: 0 auto;
+
+  @media (max-width: $tablet-width) {
+    padding: 0 2vw;
+  }
 
 }
 

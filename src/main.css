@@ -305,6 +305,11 @@ html {
   max-width: 1220px;
   margin: 0 auto;
 }
+@media (max-width: 1280px) {
+  .wrapper {
+    padding: 0 2vw;
+  }
+}
 
 .hidden {
   position: absolute;
@@ -346,12 +351,65 @@ html {
 .navigation {
   display: flex;
   flex-direction: row;
-  column-gap: 48px;
+  column-gap: 5vw;
+}
+@media (min-width: 1024px) {
+  .navigation {
+    column-gap: 48px;
+  }
+}
+.navigation__link {
+  display: contents;
+}
+.navigation__toggle-button {
+  display: block;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  width: 48px;
+  height: 48px;
+  position: relative;
+}
+@media (min-width: 1024px) {
+  .navigation__toggle-button {
+    display: none;
+  }
+}
+.navigation__toggle {
+  display: block;
+  position: absolute;
+  top: 12px;
+}
+.navigation__toggle--closed {
+  width: 48px;
+  height: 1px;
+  background-color: #000;
+  box-shadow: 0 12px 0 0 #000, 0 24px 0 0 #000;
+  z-index: 2;
+}
+.navigation__toggle--open {
+  top: 22px;
+}
+.navigation__toggle--open::before {
+  content: "";
+  position: absolute;
+  width: 48px;
+  height: 2px;
+  background-color: #000;
+  transform: rotate(-45deg);
+}
+.navigation__toggle--open::after {
+  content: "";
+  position: absolute;
+  width: 48px;
+  height: 2px;
+  background-color: #000;
+  transform: rotate(45deg);
+  box-shadow: none;
 }
 
 .menu {
   display: none;
-  order: 1;
 }
 @media screen and (min-width: 1024px) {
   .menu {
@@ -359,10 +417,15 @@ html {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    column-gap: 48px;
+    column-gap: 3vw;
     flex-wrap: wrap;
     font-size: inherit;
     list-style: none;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .menu {
+    column-gap: 48px;
   }
 }
 .menu__link {
@@ -376,15 +439,21 @@ html {
 }
 
 .search {
+  position: relative;
   display: flex;
   flex-direction: row;
-  width: 416px;
+  width: 60vw;
+}
+@media screen and (min-width: 768px) {
+  .search {
+    width: 416px;
+  }
 }
 .search__input {
   display: flex;
   align-items: center;
   flex-grow: 1;
-  padding-left: 16px;
+  padding-left: 2vw;
   height: auto;
   border: 1px solid var(--stroke-color);
   background-color: transparent;
@@ -394,8 +463,23 @@ html {
   outline: none;
   color: var(--main-font-color);
 }
+@media screen and (min-width: 768px) {
+  .search__input {
+    padding: 16px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .search__input {
+    padding: 16px;
+  }
+}
 .search__button {
-  width: 122px;
+  width: 15vw;
+}
+@media screen and (min-width: 768px) {
+  .search__button {
+    width: 122px;
+  }
 }
 
 .catalog {
