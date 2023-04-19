@@ -1,18 +1,4 @@
 @import url('normalize.css/normalize.css');
-@import url("scss/fonts.scss");
-
-$font-size: 1rem;
-$font-color: green;
-
-html {
-  font-size: $font-size;
-  color: $font-color;
-}
-
-.paragraph {
-  font-family: 'Merriweather';
-  font-size: 30px;
-  font-weight: 700;
-  color: black;
-
-}
+@import url("scss/font/fonts.scss");
+@import url("scss/font/typo.scss");
+@import url("scss/helpers/layouts.scss");
