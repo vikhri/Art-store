@@ -10,6 +10,80 @@
   --button-bg-color: #382E2B;
   --button-text-color: #F4F6F9;
   --button-secondary-bg-color: #5B3A32;
+  --desktop-width: 1440px;
+  --tablet-width: 1280px;
+  --tablet-s-width: 1024px;
+  --tablet-xs-width: 768px;
+  --mobile-width: 480px;
+  --mobile-s-width: 360px;
+}
+
+.page {
+  font-family: "Merriweather", "Arial", serif;
+  font-weight: 400;
+  color: var(--main-font-color);
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+h1 {
+  font-family: "Merriweather", "Arial", serif;
+  font-weight: 700;
+  color: var(--main-font-color);
+  line-height: 1.5;
+  font-size: 24px;
+}
+
+h2 {
+  font-family: "Merriweather", "Arial", serif;
+  font-weight: 400;
+  color: var(--main-font-color);
+  line-height: 1.5;
+  font-size: 18px;
+}
+
+h3 {
+  font-family: "Merriweather", "Arial", serif;
+  font-weight: 700;
+  color: var(--main-font-color);
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+h4 {
+  font-family: "Merriweather", "Arial", serif;
+  font-weight: 700;
+  color: var(--main-font-color);
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+h5 {
+  font-family: "Merriweather", "Arial", serif;
+  font-weight: 400;
+  color: var(--main-font-color);
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+h6 {
+  font-family: "Merriweather", "Arial", serif;
+  font-weight: 300;
+  color: var(--main-font-color);
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+address {
+  font-style: normal;
+}
+
+.text-sold {
+  font-family: "Merriweather", "Arial", serif;
+  font-weight: 700;
+  color: var(--main-font-color);
+  line-height: 1.5;
+  font-size: 16px;
 }
 
 * {
@@ -136,5 +210,17 @@ html {
   flex-direction: row;
   column-gap: 48px;
 }
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+  height: 48px;
+  width: 112px;
+}
+
+/*# sourceMappingURL=button.css.map */
 
 /*# sourceMappingURL=main.css.map */

@@ -1,5 +1,7 @@
 :root {
 
+  //colors
+
   --page-background-color: #F6F3F3;
   --footer-background-color: #ECEAEA;
 
@@ -13,6 +15,18 @@
   --button-text-color: #F4F6F9;
   --button-secondary-bg-color: #5B3A32;
 
+  //screens
+
+  --desktop-width: 1440px;
+
+  --tablet-width: 1280px;
+  --tablet-s-width: 1024px;
+  --tablet-xs-width: 768px;
+
+  --mobile-width: 480px;
+  --mobile-s-width: 360px;
+
 }
+
 
 

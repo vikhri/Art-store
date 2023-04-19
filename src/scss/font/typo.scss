@@ -1,0 +1,78 @@
+@mixin main-font {
+  font-family: 'Merriweather', 'Arial', serif;
+  font-weight: 400;
+  color: var(--main-font-color);
+  line-height: 1.5;
+}
+
+@mixin bold-font {
+  font-family: 'Merriweather', 'Arial', serif;
+  font-weight: 700;
+  color: var(--main-font-color);
+  line-height: 1.5;
+}
+
+@mixin light-font {
+  font-family: 'Merriweather', 'Arial', serif;
+  font-weight: 300;
+  color: var(--main-font-color);
+  line-height: 1.5;
+}
+
+@mixin fluid-text($font-min, $font-max, $screen-min, $screen-max) {
+  font-size: #{$font-min}px;
+
+  @media only screen and (min-width: #{$screen-min}px) {
+    font-size: calc(
+            #{$font-min}px + #{($font-max - $font-min)} * (100vw - #{$screen-min}px) / (#{$screen-max} - #{$screen-min})
+    );
+  }
+  @media only screen and (min-width: #{$screen-max}px) {
+    font-size: #{$font-max}px;
+  }
+}
+
+
+.page {
+  @include main-font;
+  font-size: 14px;
+}
+
+h1 {
+  @include bold-font;
+  font-size: 24px;
+}
+
+h2 {
+  @include main-font;
+  font-size: 18px;
+}
+
+h3 {
+  @include bold-font;
+  font-size: 16px;
+}
+
+h4 {
+  @include bold-font;
+  font-size: 14px
+}
+
+h5 {
+  @include main-font;
+  font-size: 14px;
+}
+
+h6 {
+  @include light-font;
+  font-size: 14px;
+}
+
+address {
+  font-style: normal;
+}
+
+.text-sold {
+  @include bold-font;
+  font-size: 16px;
+}
