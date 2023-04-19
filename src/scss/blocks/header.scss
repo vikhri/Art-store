@@ -1,0 +1,26 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 24px 0;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  column-gap: 48px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 48px;
+  flex-wrap: wrap;
+
+  list-style: none;
+
+}

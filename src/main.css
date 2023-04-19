@@ -1,0 +1,140 @@
+@import url("normalize.css/normalize.css");
+@import url("scss/font/fonts.scss");
+:root {
+  --page-background-color: #F6F3F3;
+  --footer-background-color: #ECEAEA;
+  --stroke-color: #E1E1E1;
+  --main-font-color: #343030;
+  --footer-font-color: #555555;
+  --old-price-font-color: #A0A0A0;
+  --button-bg-color: #382E2B;
+  --button-text-color: #F4F6F9;
+  --button-secondary-bg-color: #5B3A32;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+.wrapper {
+  max-width: 1220px;
+  margin: 0 auto;
+}
+
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.page {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  background-color: var(--page-background-color);
+}
+.page__header {
+  border-bottom: 1px solid var(--stroke-color);
+}
+.page__content {
+  flex-grow: 1;
+}
+.page__footer {
+  background-color: var(--footer-background-color);
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  column-gap: 48px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 48px;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.catalog {
+  padding: 45px 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+}
+.catalog__list {
+  display: grid;
+  grid-template-columns: repeat(4, 280px);
+  gap: 32px;
+  list-style: none;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  height: 328px;
+  border: 1px solid var(--stroke-color);
+}
+.card__link {
+  width: 100%;
+  text-decoration: none;
+}
+.card__image {
+  width: 100%;
+  height: 160px;
+  object-fit: fill;
+}
+.card__info {
+  padding: 20px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 22px;
+}
+.card__buy-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer {
+  padding: 24px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__contacts {
+  display: flex;
+  flex-direction: row;
+  column-gap: 48px;
+}
+
+/*# sourceMappingURL=main.css.map */

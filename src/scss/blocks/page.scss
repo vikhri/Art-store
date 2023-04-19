@@ -1,3 +1,20 @@
 .page {
-  background-color: #E5E5E5;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  background-color: var(--page-background-color);
+
+
+  &__header {
+    border-bottom: 1px solid var(--stroke-color);
+  }
+
+  &__content {
+    flex-grow: 1;
+  }
+
+  &__footer {
+    background-color: var(--footer-background-color);
+  }
 }
+

@@ -1,4 +1,10 @@
-@import url('normalize.css/normalize.css');
+@use "scss/helpers/variables";
+@use "scss/font/typo";
+@use "scss/helpers/layouts";
+@use "scss/blocks/page";
+@use "scss/blocks/header.scss";
+@use "scss/blocks/catalog.scss";
+@use "scss/blocks/footer.scss";
+
+@import url("normalize.css/normalize.css");
 @import url("scss/font/fonts.scss");
-@import url("scss/font/typo.scss");
-@import url("scss/helpers/layouts.scss");
