@@ -6,12 +6,15 @@
   --footer-background-color: #ECEAEA;
 
   --stroke-color: #E1E1E1;
+  --stroke-active-color: #B5B5B5;
 
   --main-font-color: #343030;
   --footer-font-color: #555555;
   --old-price-font-color: #A0A0A0;
 
   --button-bg-color: #382E2B;
+  --button-hover-color: #776763;
+  --button-disable-color: #C1B4B1;
   --button-text-color: #F4F6F9;
   --button-secondary-bg-color: #5B3A32;
 
@@ -27,6 +30,11 @@
   --mobile-s-width: 360px;
 
 }
+
+$tablet-width: 1280px;
+
+
+
 
 
 

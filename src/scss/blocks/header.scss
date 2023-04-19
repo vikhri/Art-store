@@ -1,3 +1,12 @@
+$tablet-width: 1280px;
+$tablet-width: 1280px;
+$tablet-s-width: 1024px;
+$tablet-xs-width: 768px;
+
+$mobile-width: 480px;
+$mobile-s-width: 360px;
+
+
 .header {
   display: flex;
   flex-direction: row;
@@ -14,13 +23,64 @@
 }
 
 .menu {
+  display: none;
+  order: 1;
+
+  @media screen and (min-width: $tablet-s-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 48px;
+    flex-wrap: wrap;
+
+    font-size: inherit;
+
+    list-style: none;
+  }
+
+
+  &__link {
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      opacity: 0.7;
+    }
+
+    &:active {
+      opacity: 1;
+    }
+  }
+
+}
+
+.search {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  column-gap: 48px;
-  flex-wrap: wrap;
+  width: 416px;
 
-  list-style: none;
+  &__input {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    padding-left: 16px;
+    height: auto;
+
+    border: 1px solid var(--stroke-color);
+    background-color: transparent;
+
+    &:focus,
+    &:focus-visible,
+    &:active {
+      border-color: var(--stroke-active-color);
+      outline: none;
+      color: var(--main-font-color);
+    }
+  }
+
+  &__button {
+    width: 122px;
+  }
 
 }

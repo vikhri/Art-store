@@ -2,10 +2,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--button-bg-color);
-  color: var(--button-text-color);
   height: 48px;
   width: 112px;
+  border: none;
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+}
+.button:hover {
+  background-color: var(--button-hover-color);
+}
+.button:disabled {
+  background-color: var(--button-disable-color);
+}
+.button:active {
+  background-color: var(--button-bg-color);
 }
 
 /*# sourceMappingURL=button.css.map */

@@ -9,5 +9,21 @@
     display: flex;
     flex-direction: row;
     column-gap: 48px;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+
+      &:hover,
+      &:focus {
+        opacity: 0.7;
+      }
+
+      &:active {
+        opacity: 1;
+      }
+
+    }
+
   }
 }

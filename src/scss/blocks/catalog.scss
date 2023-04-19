@@ -1,15 +1,29 @@
+$tablet-width: 1280px;
+$tablet-width: 1280px;
+$tablet-s-width: 1024px;
+$tablet-xs-width: 768px;
+
+$mobile-width: 480px;
+$mobile-s-width: 360px;
+
 .catalog {
   padding: 45px 0;
   display: flex;
   flex-direction: column;
-  row-gap: 40px;
+  row-gap: 38px;
 
   &__list {
     display: grid;
-    grid-template-columns: repeat( 4, 280px);
+    grid-template-columns: repeat(4, 1fr);
     gap: 32px;
 
     list-style: none;
+
+    @media screen and (max-width: $tablet-s-width) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+
   }
 }
 
@@ -18,10 +32,15 @@
   display: flex;
   flex-direction: column;
 
-  width: 280px;
-  height: 328px;
+  max-width: 280px;
+  min-width: 200px;
+  max-height: 328px;
 
   border: 1px solid var(--stroke-color);
+
+  &--inactive {
+    opacity: 0.5;
+  }
 
   &__link {
     width: 100%;
@@ -29,8 +48,10 @@
   }
 
   &__image {
+    display: flex;
     width: 100%;
-    height: 160px;
+    max-height: 160px;
+    height: 13vw;
 
     object-fit: fill;
   }
@@ -38,8 +59,13 @@
   &__info {
     padding: 20px 24px 24px;
     display: flex;
+    flex-grow: 1;
     flex-direction: column;
     row-gap: 22px;
+
+    @media screen and (max-width: $tablet-width) {
+      padding: 7%;
+    }
   }
 
   &__buy-section {
@@ -47,6 +73,15 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+  }
+
+  &__button {
+    max-width: 112px;
+
+    @media screen and (max-width: $tablet-width) {
+      max-width: 100px;
+    }
+
   }
 
 }

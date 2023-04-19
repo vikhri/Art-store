@@ -1,11 +1,12 @@
 @use "scss/helpers/variables";
 @use "scss/font/typo";
+@use "scss/blocks/button.css";
 @use "scss/helpers/layouts";
 @use "scss/blocks/page";
 @use "scss/blocks/header.scss";
 @use "scss/blocks/catalog.scss";
 @use "scss/blocks/footer.scss";
-@use "scss/blocks/button.css";
+
 
 @import url("normalize.css/normalize.css");
 @import url("scss/font/fonts.scss");
