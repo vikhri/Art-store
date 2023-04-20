@@ -398,6 +398,7 @@ html {
   display: block;
   position: absolute;
   top: 12px;
+  z-index: 4;
 }
 .navigation__toggle--closed {
   width: 100%;
@@ -408,11 +409,12 @@ html {
 }
 .navigation__toggle--open {
   top: 22px;
+  z-index: 4;
 }
 .navigation__toggle--open::before {
   content: "";
   position: absolute;
-  width: 48px;
+  width: 30px;
   height: 2px;
   background-color: #000;
   transform: rotate(-45deg);
@@ -420,7 +422,7 @@ html {
 .navigation__toggle--open::after {
   content: "";
   position: absolute;
-  width: 48px;
+  width: 30px;
   height: 2px;
   background-color: #000;
   transform: rotate(45deg);
@@ -440,6 +442,9 @@ html {
   padding: 50px 0 0 10%;
   background-color: var(--footer-background-color);
   list-style: none;
+}
+.menu--open {
+  display: flex;
 }
 @media screen and (min-width: 1024px) {
   .menu {
