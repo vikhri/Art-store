@@ -4,6 +4,7 @@
   align-items: center;
   height: 48px;
   width: 112px;
+  min-width: 100px;
   border: none;
   background-color: var(--button-bg-color);
   color: var(--button-text-color);

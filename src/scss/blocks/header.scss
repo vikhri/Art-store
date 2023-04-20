@@ -33,6 +33,7 @@ $mobile-s-width: 360px;
 
   &__link {
     display: contents;
+
   }
 
   &__toggle-button {
@@ -45,6 +46,7 @@ $mobile-s-width: 360px;
     width: 30px;
     height: 30px;
     position: relative;
+    z-index: 3;
 
     @media (min-width: $tablet-s-width) {
       display: none;
@@ -91,19 +93,36 @@ $mobile-s-width: 360px;
 }
 
 .menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+
   display: none;
+  flex-direction: column;
+  row-gap: 30px;
+  height: 100%;
+  width: 40%;
+  padding: 50px 0 0 10%;
+
+  background-color: var(--footer-background-color);
+  list-style: none;
 
   @media screen and (min-width: $tablet-s-width) {
+    position: static;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
     column-gap: 3vw;
     flex-wrap: wrap;
+    padding: 0;
+    width: auto;
+    height: auto;
+
+    background-color: transparent;
 
     font-size: inherit;
-
-    list-style: none;
   }
 
   @media screen and (min-width: $tablet-width) {
@@ -113,6 +132,7 @@ $mobile-s-width: 360px;
 
   &__link {
     cursor: pointer;
+    padding: 10px 0;
 
     &:hover,
     &:focus {
@@ -128,7 +148,7 @@ $mobile-s-width: 360px;
 
 .search {
   position: absolute;
-  width: 97vw;
+  width: 97%;
   top: 70px;
 
 
@@ -162,14 +182,6 @@ $mobile-s-width: 360px;
       border-color: var(--stroke-active-color);
       outline: none;
       color: var(--main-font-color);
-    }
-
-    @media screen and (min-width: $tablet-xs-width) {
-      padding: 16px;
-    }
-
-    @media screen and (min-width: $tablet-xs-width) {
-      padding: 16px;
     }
   }
 
