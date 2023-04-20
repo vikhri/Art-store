@@ -25,10 +25,9 @@ html {
   max-width: 1220px;
   margin: 0 auto;
 
-  @media (max-width: $tablet-width) {
+  @media (--tablet) {
     padding: 0 2vw;
   }
-
 }
 
 .hidden {

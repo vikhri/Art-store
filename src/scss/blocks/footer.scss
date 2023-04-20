@@ -1,23 +1,17 @@
-$tablet-width: 1280px;
-$tablet-width: 1280px;
-$tablet-s-width: 1024px;
-$tablet-xs-width: 768px;
-$mobile-width: 480px;
-$mobile-s-width: 360px;
-
 .footer {
-  padding: 24px 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+
+  padding: 24px 0;
 
   &__contacts {
     display: flex;
     flex-direction: row;
     column-gap: 48px;
 
-    @media screen and (max-width: $mobile-width) {
+    @media (--mobile) {
       flex-direction: column;
       align-self: center;
       align-items: end;
@@ -35,9 +29,7 @@ $mobile-s-width: 360px;
       &:active {
         opacity: 1;
       }
-
     }
-
   }
 }
 
@@ -58,7 +50,7 @@ $mobile-s-width: 360px;
       background-image: url("././images/icons/phone-icon.svg");
       background-repeat: no-repeat;
 
-      @media screen and (max-width: $mobile-width) {
+      @media (--mobile) {
         display: none;
       }
 
@@ -80,11 +72,9 @@ $mobile-s-width: 360px;
       background-image: url("././images/icons/address-icon.svg");
       background-repeat: no-repeat;
 
-      @media screen and (max-width: $mobile-width) {
+      @media (--mobile) {
         display: none;
       }
-
     }
   }
-
 }

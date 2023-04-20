@@ -1,43 +1,35 @@
-$tablet-width: 1280px;
-$tablet-width: 1280px;
-$tablet-s-width: 1024px;
-$tablet-xs-width: 768px;
-
-$mobile-width: 480px;
-$mobile-s-width: 360px;
-
 .catalog {
-  padding: 45px 0;
   display: flex;
   flex-direction: column;
   row-gap: 38px;
+  padding: 45px 0;
 
-  @media (max-width: $mobile-width) {
+  @media (--mobile) {
     padding-top: 10vh;
   }
 
   &__list {
     display: grid;
-    grid-template-columns: repeat(4 , 1fr) ;
+    grid-template-columns: repeat(4, 1fr);
     gap: 32px;
+
     list-style: none;
 
-    @media screen and (max-width: $tablet-s-width) {
-      grid-template-columns: repeat(3 , 1fr);
+    @media (--tablet-s) {
+      grid-template-columns: repeat(3, 1fr);
     }
 
-    @media screen and (max-width: $tablet-xs-width) {
-      grid-template-columns: repeat(2 , 1fr);
+    @media (--tablet-xs) {
+      grid-template-columns: repeat(2, 1fr);
       gap: 20px;
     }
 
-    @media screen and (max-width: $mobile-width) {
+    @media (--mobile) {
       grid-template-columns: 95%;
-      margin: 0 auto;
+      align-self: center;
     }
   }
 }
-
 
 .card {
   display: flex;
@@ -61,23 +53,20 @@ $mobile-s-width: 360px;
   &__image {
     display: flex;
     width: 100%;
-    height: 16vh;
+    height: 20vh;
     max-height: 160px;
-    min-height: 130px;
 
     object-fit: cover;
-
-
   }
 
   &__info {
-    padding: 20px 24px 24px;
     display: flex;
     flex-grow: 1;
     flex-direction: column;
     row-gap: 22px;
+    padding: 20px 24px 24px;
 
-    @media screen and (max-width: $tablet-width) {
+    @media (--tablet) {
       padding: 7%;
     }
   }
@@ -87,20 +76,66 @@ $mobile-s-width: 360px;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-
-
-
   }
 
   &__button {
-    max-width: 112px;
+    max-width: 118px;
 
-
-    @media screen and (max-width: $tablet-width) {
-      max-width: 95px;
+    @media (--tablet) {
+      max-width: 105px;
     }
 
-  }
+    &--loader {
+      color: transparent;
 
+      &::after {
+        position: relative;
+        top: 0;
+        bottom: 0;
+        right: 25%;
+        content: "";
+
+        width: 18px;
+        height: 18px;
+
+        margin: auto;
+
+        border: 3px solid white;
+        border-top-color: transparent;
+        border-radius: 50%;
+        animation: button-loading-spinner 1s ease infinite;
+      }
+    }
+
+    &--incart {
+      position: relative;
+      padding-left: 28px;
+
+      @media (--tablet) {
+        padding-left: 10%;
+      }
+
+      &::before {
+        position: absolute;
+        top: 16px;
+        left: 10px;
+        content: " ";
+
+        width: 20px;
+        height: 20px;
+
+        background-image: url("././images/icons/check-mark.svg");
+        background-repeat: no-repeat;
+
+        @media (--tablet-xs) {
+          width: 15px;
+          height: 15px;
+        }
+      }
+    }
+  }
 }
+
+
+
 

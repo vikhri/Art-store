@@ -13,29 +13,35 @@
   --button-disable-color: #C1B4B1;
   --button-text-color: #F4F6F9;
   --button-secondary-bg-color: #5B3A32;
-  --desktop-width: 1440px;
-  --tablet-width: 1280px;
-  --tablet-s-width: 1024px;
-  --tablet-xs-width: 768px;
-  --mobile-width: 480px;
-  --mobile-s-width: 360px;
 }
 
+@custom-media --desktop (max-width: 1440px);
+@custom-media --desktop-above (min-width: 1441px);
+@custom-media --tablet (max-width: 1280px);
+@custom-media --tablet-above (min-width: 1281px);
+@custom-media --tablet-s (max-width: 1024px);
+@custom-media --tablet-s-above (min-width: 1025px);
+@custom-media --tablet-xs (max-width: 768px);
+@custom-media --tablet-xs-above (min-width: 769px);
+@custom-media --mobile (max-width: 480px);
+@custom-media --mobile-above (min-width: 481px);
+@custom-media --mobile-s (max-width: 360px);
+@custom-media --mobile-s-above (min-width: 361px);
 .page {
-  font-family: "Merriweather", "Arial";
+  font-family: "Merriweather", "Arial", serif;
   font-weight: 400;
   color: var(--main-font-color);
   line-height: 1.5;
   font-size: 12px;
 }
-@media only screen and (min-width: 360px) {
+@media (min-width: 360px) {
   .page {
     font-size: calc(
             12px + 2 * (100vw - 360px) / (1920 - 360)
     );
   }
 }
-@media only screen and (min-width: 1920px) {
+@media (min-width: 1920px) {
   .page {
     font-size: 14px;
   }
@@ -48,34 +54,34 @@ h1 {
   line-height: 1.5;
   font-size: 18px;
 }
-@media only screen and (min-width: 360px) {
+@media (min-width: 360px) {
   h1 {
     font-size: calc(
             18px + 6 * (100vw - 360px) / (1920 - 360)
     );
   }
 }
-@media only screen and (min-width: 1920px) {
+@media (min-width: 1920px) {
   h1 {
     font-size: 24px;
   }
 }
 
 h2 {
-  font-family: "Merriweather", "Arial";
+  font-family: "Merriweather", "Arial", serif;
   font-weight: 400;
   color: var(--main-font-color);
   line-height: 1.5;
   font-size: 14px;
 }
-@media only screen and (min-width: 360px) {
+@media (min-width: 360px) {
   h2 {
     font-size: calc(
             14px + 4 * (100vw - 360px) / (1920 - 360)
     );
   }
 }
-@media only screen and (min-width: 1920px) {
+@media (min-width: 1920px) {
   h2 {
     font-size: 18px;
   }
@@ -88,14 +94,14 @@ h3 {
   line-height: 1.5;
   font-size: 14px;
 }
-@media only screen and (min-width: 360px) {
+@media (min-width: 360px) {
   h3 {
     font-size: calc(
             14px + 2 * (100vw - 360px) / (1920 - 360)
     );
   }
 }
-@media only screen and (min-width: 1920px) {
+@media (min-width: 1920px) {
   h3 {
     font-size: 16px;
   }
@@ -108,34 +114,34 @@ h4 {
   line-height: 1.5;
   font-size: 12px;
 }
-@media only screen and (min-width: 360px) {
+@media (min-width: 360px) {
   h4 {
     font-size: calc(
             12px + 2 * (100vw - 360px) / (1920 - 360)
     );
   }
 }
-@media only screen and (min-width: 1920px) {
+@media (min-width: 1920px) {
   h4 {
     font-size: 14px;
   }
 }
 
 h5 {
-  font-family: "Merriweather", "Arial";
+  font-family: "Merriweather", "Arial", serif;
   font-weight: 400;
   color: var(--main-font-color);
   line-height: 1.5;
   font-size: 12px;
 }
-@media only screen and (min-width: 360px) {
+@media (min-width: 360px) {
   h5 {
     font-size: calc(
             12px + 2 * (100vw - 360px) / (1920 - 360)
     );
   }
 }
-@media only screen and (min-width: 1920px) {
+@media (min-width: 1920px) {
   h5 {
     font-size: 14px;
   }
@@ -148,14 +154,14 @@ h6 {
   line-height: 1.5;
   font-size: 12px;
 }
-@media only screen and (min-width: 360px) {
+@media (min-width: 360px) {
   h6 {
     font-size: calc(
             12px + 2 * (100vw - 360px) / (1920 - 360)
     );
   }
 }
-@media only screen and (min-width: 1920px) {
+@media (min-width: 1920px) {
   h6 {
     font-size: 14px;
   }
@@ -165,14 +171,14 @@ address {
   font-style: normal;
   font-size: 12px;
 }
-@media only screen and (min-width: 360px) {
+@media (min-width: 360px) {
   address {
     font-size: calc(
             12px + 2 * (100vw - 360px) / (1920 - 360)
     );
   }
 }
-@media only screen and (min-width: 1920px) {
+@media (min-width: 1920px) {
   address {
     font-size: 14px;
   }
@@ -185,14 +191,14 @@ address {
   line-height: 1.5;
   font-size: 14px;
 }
-@media only screen and (min-width: 360px) {
+@media (min-width: 360px) {
   .text-sold {
     font-size: calc(
             14px + 2 * (100vw - 360px) / (1920 - 360)
     );
   }
 }
-@media only screen and (min-width: 1920px) {
+@media (min-width: 1920px) {
   .text-sold {
     font-size: 16px;
   }
@@ -206,14 +212,14 @@ address {
   color: var(--button-text-color);
   font-size: 12px;
 }
-@media only screen and (min-width: 360px) {
+@media (min-width: 360px) {
   .button {
     font-size: calc(
             12px + 2 * (100vw - 360px) / (1920 - 360)
     );
   }
 }
-@media only screen and (min-width: 1920px) {
+@media (min-width: 1920px) {
   .button {
     font-size: 14px;
   }
@@ -226,14 +232,14 @@ address {
   line-height: 1.5;
   font-size: 12px;
 }
-@media only screen and (min-width: 360px) {
+@media (min-width: 360px) {
   .price {
     font-size: calc(
             12px + 4 * (100vw - 360px) / (1920 - 360)
     );
   }
 }
-@media only screen and (min-width: 1920px) {
+@media (min-width: 1920px) {
   .price {
     font-size: 16px;
   }
@@ -247,14 +253,14 @@ address {
   text-decoration: line-through;
   color: var(--old-price-font-color);
 }
-@media only screen and (min-width: 360px) {
+@media (min-width: 360px) {
   .price--old {
     font-size: calc(
             12px + 2 * (100vw - 360px) / (1920 - 360)
     );
   }
 }
-@media only screen and (min-width: 1920px) {
+@media (min-width: 1920px) {
   .price--old {
     font-size: 14px;
   }
@@ -264,14 +270,14 @@ input {
   font-size: 12px;
   color: #9F9F9F;
 }
-@media only screen and (min-width: 360px) {
+@media (min-width: 360px) {
   input {
     font-size: calc(
             12px + 2 * (100vw - 360px) / (1920 - 360)
     );
   }
 }
-@media only screen and (min-width: 1920px) {
+@media (min-width: 1920px) {
   input {
     font-size: 14px;
   }
@@ -318,7 +324,7 @@ html {
   max-width: 1220px;
   margin: 0 auto;
 }
-@media (max-width: 1280px) {
+@media (--tablet) {
   .wrapper {
     padding: 0 2vw;
   }
@@ -366,7 +372,7 @@ html {
   flex-direction: row;
   column-gap: 5vw;
 }
-@media (min-width: 1024px) {
+@media (--tablet-s-above) {
   .navigation {
     column-gap: 48px;
   }
@@ -380,24 +386,25 @@ html {
   display: contents;
 }
 .navigation__toggle-button {
+  position: relative;
+  top: -7px;
   display: block;
-  background-color: transparent;
-  cursor: pointer;
-  border: none;
   width: 30px;
   height: 30px;
-  position: relative;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
   z-index: 3;
 }
-@media (min-width: 1024px) {
+@media (--tablet-s-above) {
   .navigation__toggle-button {
     display: none;
   }
 }
 .navigation__toggle {
-  display: block;
   position: absolute;
   top: 12px;
+  display: block;
   z-index: 4;
 }
 .navigation__toggle--closed {
@@ -405,25 +412,25 @@ html {
   height: 1px;
   background-color: #000;
   box-shadow: 0 8px 0 0 #000, 0 16px 0 0 #000;
-  z-index: 2;
+  z-index: 4;
 }
 .navigation__toggle--open {
   top: 22px;
   z-index: 4;
 }
 .navigation__toggle--open::before {
-  content: "";
   position: absolute;
+  content: "";
   width: 30px;
-  height: 2px;
+  height: 1px;
   background-color: #000;
   transform: rotate(-45deg);
 }
 .navigation__toggle--open::after {
-  content: "";
   position: absolute;
+  content: "";
   width: 30px;
-  height: 2px;
+  height: 1px;
   background-color: #000;
   transform: rotate(45deg);
   box-shadow: none;
@@ -439,14 +446,15 @@ html {
   row-gap: 30px;
   height: 100%;
   width: 40%;
-  padding: 50px 0 0 10%;
+  min-width: 200px;
+  padding: 65px 0 0 10%;
   background-color: var(--footer-background-color);
   list-style: none;
 }
 .menu--open {
   display: flex;
 }
-@media screen and (min-width: 1024px) {
+@media (--tablet-s-above) {
   .menu {
     position: static;
     display: flex;
@@ -454,15 +462,16 @@ html {
     justify-content: flex-start;
     align-items: center;
     column-gap: 3vw;
+    row-gap: 10px;
     flex-wrap: wrap;
-    padding: 0;
     width: auto;
     height: auto;
+    padding: 0;
     background-color: transparent;
     font-size: inherit;
   }
 }
-@media screen and (min-width: 1280px) {
+@media (--tablet-above) {
   .menu {
     column-gap: 48px;
   }
@@ -485,13 +494,13 @@ html {
   display: flex;
   flex-direction: row;
 }
-@media (min-width: 480px) {
+@media (--mobile-above) {
   .search {
     position: static;
     width: 60vw;
   }
 }
-@media (min-width: 768px) {
+@media (--tablet-xs-above) {
   .search {
     width: 416px;
   }
@@ -513,19 +522,19 @@ html {
 .search__button {
   width: 15vw;
 }
-@media screen and (min-width: 768px) {
+@media (--tablet-xs-above) {
   .search__button {
     width: 122px;
   }
 }
 
 .catalog {
-  padding: 45px 0;
   display: flex;
   flex-direction: column;
   row-gap: 38px;
+  padding: 45px 0;
 }
-@media (max-width: 480px) {
+@media (--mobile) {
   .catalog {
     padding-top: 10vh;
   }
@@ -536,21 +545,21 @@ html {
   gap: 32px;
   list-style: none;
 }
-@media screen and (max-width: 1024px) {
+@media (--tablet-s) {
   .catalog__list {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-@media screen and (max-width: 768px) {
+@media (--tablet-xs) {
   .catalog__list {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
 }
-@media screen and (max-width: 480px) {
+@media (--mobile) {
   .catalog__list {
     grid-template-columns: 95%;
-    margin: 0 auto;
+    align-self: center;
   }
 }
 
@@ -572,19 +581,18 @@ html {
 .card__image {
   display: flex;
   width: 100%;
-  height: 16vh;
+  height: 20vh;
   max-height: 160px;
-  min-height: 130px;
   object-fit: cover;
 }
 .card__info {
-  padding: 20px 24px 24px;
   display: flex;
   flex-grow: 1;
   flex-direction: column;
   row-gap: 22px;
+  padding: 20px 24px 24px;
 }
-@media screen and (max-width: 1280px) {
+@media (--tablet) {
   .card__info {
     padding: 7%;
   }
@@ -596,27 +604,69 @@ html {
   align-items: center;
 }
 .card__button {
-  max-width: 112px;
+  max-width: 118px;
 }
-@media screen and (max-width: 1280px) {
+@media (--tablet) {
   .card__button {
-    max-width: 95px;
+    max-width: 105px;
+  }
+}
+.card__button--loader {
+  color: transparent;
+}
+.card__button--loader::after {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  right: 25%;
+  content: "";
+  width: 18px;
+  height: 18px;
+  margin: auto;
+  border: 3px solid white;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: button-loading-spinner 1s ease infinite;
+}
+.card__button--incart {
+  position: relative;
+  padding-left: 28px;
+}
+@media (--tablet) {
+  .card__button--incart {
+    padding-left: 10%;
+  }
+}
+.card__button--incart::before {
+  position: absolute;
+  top: 16px;
+  left: 10px;
+  content: " ";
+  width: 20px;
+  height: 20px;
+  background-image: url("././images/icons/check-mark.svg");
+  background-repeat: no-repeat;
+}
+@media (--tablet-xs) {
+  .card__button--incart::before {
+    width: 15px;
+    height: 15px;
   }
 }
 
 .footer {
-  padding: 24px 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  padding: 24px 0;
 }
 .footer__contacts {
   display: flex;
   flex-direction: row;
   column-gap: 48px;
 }
-@media screen and (max-width: 480px) {
+@media (--mobile) {
   .footer__contacts {
     flex-direction: column;
     align-self: center;
@@ -647,7 +697,7 @@ html {
   background-image: url("././images/icons/phone-icon.svg");
   background-repeat: no-repeat;
 }
-@media screen and (max-width: 480px) {
+@media (--mobile) {
   .contacts__phone:before {
     display: none;
   }
@@ -665,7 +715,7 @@ html {
   background-image: url("././images/icons/address-icon.svg");
   background-repeat: no-repeat;
 }
-@media screen and (max-width: 480px) {
+@media (--mobile) {
   .contacts__address:before {
     display: none;
   }
