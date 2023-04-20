@@ -204,7 +204,19 @@ address {
   color: var(--main-font-color);
   line-height: 1.5;
   color: var(--button-text-color);
-  font-size: 14px;
+  font-size: 12px;
+}
+@media only screen and (min-width: 360px) {
+  .button {
+    font-size: calc(
+            12px + 2 * (100vw - 360px) / (1920 - 360)
+    );
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .button {
+    font-size: 14px;
+  }
 }
 
 .price {
@@ -345,7 +357,7 @@ html {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 24px 0;
+  padding: 2% 0;
 }
 
 .navigation {
@@ -358,6 +370,11 @@ html {
     column-gap: 48px;
   }
 }
+.navigation__logo {
+  max-width: 48px;
+  min-width: 40px;
+  width: 10vw;
+}
 .navigation__link {
   display: contents;
 }
@@ -366,8 +383,8 @@ html {
   background-color: transparent;
   cursor: pointer;
   border: none;
-  width: 48px;
-  height: 48px;
+  width: 30px;
+  height: 30px;
   position: relative;
 }
 @media (min-width: 1024px) {
@@ -381,10 +398,10 @@ html {
   top: 12px;
 }
 .navigation__toggle--closed {
-  width: 48px;
+  width: 100%;
   height: 1px;
   background-color: #000;
-  box-shadow: 0 12px 0 0 #000, 0 24px 0 0 #000;
+  box-shadow: 0 8px 0 0 #000, 0 16px 0 0 #000;
   z-index: 2;
 }
 .navigation__toggle--open {
@@ -439,12 +456,19 @@ html {
 }
 
 .search {
-  position: relative;
+  position: absolute;
+  width: 97vw;
+  top: 70px;
   display: flex;
   flex-direction: row;
-  width: 60vw;
 }
-@media screen and (min-width: 768px) {
+@media (min-width: 480px) {
+  .search {
+    position: static;
+    width: 60vw;
+  }
+}
+@media (min-width: 768px) {
   .search {
     width: 416px;
   }
@@ -488,6 +512,11 @@ html {
   flex-direction: column;
   row-gap: 38px;
 }
+@media (max-width: 480px) {
+  .catalog {
+    padding-top: 70px;
+  }
+}
 .catalog__list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -497,6 +526,18 @@ html {
 @media screen and (max-width: 1024px) {
   .catalog__list {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 768px) {
+  .catalog__list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .catalog__list {
+    grid-template-columns: 95%;
+    margin: 0 auto;
   }
 }
 
@@ -518,9 +559,10 @@ html {
 .card__image {
   display: flex;
   width: 100%;
+  height: 16vh;
   max-height: 160px;
-  height: 13vw;
-  object-fit: fill;
+  min-height: 130px;
+  object-fit: cover;
 }
 .card__info {
   padding: 20px 24px 24px;
@@ -545,7 +587,7 @@ html {
 }
 @media screen and (max-width: 1280px) {
   .card__button {
-    max-width: 100px;
+    max-width: 95px;
   }
 }
 

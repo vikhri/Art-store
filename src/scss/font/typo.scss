@@ -81,7 +81,7 @@ address {
 .button {
   @include bold-font;
   color: var(--button-text-color);
-  font-size: 14px;
+  @include fluid-text(12, 14, 360, 1920);
 }
 
 .price {
