@@ -8,35 +8,35 @@
 <header class="page__header">
     <div class="wrapper">
         <div class="header">
-            <div class="header__navigation navigation">
+            <nav class="header__navigation navigation">
                 <a class="navigation__link" href="/">
                     <img class="navigation__logo logo" src="images/logo.svg" alt="logo">
                 </a>
                 <ul class="navigation__menu menu">
                     <li class="menu__item">
-                        <a class="menu__link">Каталог</a>
+                        <a class="menu__link" href="/">Каталог</a>
                     </li>
-                    <li class="menu__item">
+                    <li class="menu__item" href="/">
                         <a class="menu__link">Доставка</a>
                     </li>
-                    <li class="menu__item">
+                    <li class="menu__item" href="/">
                         <a class="menu__link">Оплата</a>
                     </li>
-                    <li class="menu__item">
+                    <li class="menu__item" href="/">
                         <a class="menu__link">Контакты</a>
                     </li>
-                    <li class="menu__item">
+                    <li class="menu__item" href="/">
                         <a class="menu__link">О галерее</a>
                     </li>
                 </ul>
-            </div>
+            </nav>
             <form class="header__search search" action="" method="get">
-                <label class="search__label hidden" for="search"></label>
+                <label class="search__label visually-hidden" for="search"></label>
                 <input class="search__input" name="search" id="search" type="search"
                        placeholder="Поиск по названию картины">
                 <button class="search__button button" type="submit">Найти</button>
             </form>
-            <button type="button" class="navigation__toggle-button">
+            <button type="button" class="navigation__toggle-button" aria-label="Открыть меню навигации">
                 <span class="navigation__toggle navigation__toggle--closed"></span>
             </button>
         </div>
@@ -49,12 +49,13 @@
             <ul class="catalog__list">
                 <li class="catalog__item card">
                     <a class="card__link" href="/">
-                        <img class="card__image" src="images/catalog/venera.jpg" width="150" alt="">
+                        <img class="card__image" src="images/catalog/venera.jpg" width="280" height="160" loading="lazy"
+                             alt="Картина Рождение Венеры">
                     </a>
                     <div class="card__info">
-                        <a class="card__link" href="/">
-                            <h2 class="card__title">«Рождение Венеры»<br>Сандро Боттичелли</h2>
-                        </a>
+                            <h2 class="card__title">
+                                <a class="card__link" href="/">«Рождение Венеры»<br>Сандро Боттичелли</a>
+                            </h2>
                         <div class="card__buy-section">
                             <div class="card__prices">
                                 <p class="card__price price price--old">2 000 000 $</p>
@@ -66,12 +67,13 @@
                 </li>
                 <li class="catalog__item card">
                     <a class="card__link" href="/">
-                        <img class="card__image" src="images/catalog/lords-supper.jpg" width="150" alt="">
+                        <img class="card__image" src="images/catalog/lords-supper.jpg" width="280" height="150"
+                             loading="lazy" alt="Картина Тайная Вечеря">
                     </a>
                     <div class="card__info">
-                        <a class="card__link" href="/">
-                            <h2 class="card__title">«Тайная вечеря» <br> Леонардо да Винчи</h2>
-                        </a>
+                        <h2 class="card__title">
+                            <a class="card__link" href="/">«Тайная вечеря» <br> Леонардо да Винчи</a>
+                        </h2>
                         <div class="card__buy-section">
                             <div class="card__prices">
                                 <p class="card__price price price--old">2 000 000 $</p>
@@ -83,12 +85,13 @@
                 </li>
                 <li class="catalog__item card">
                     <a class="card__link" href="/">
-                        <img class="card__image" src="images/catalog/adam-creation.jpg" width="150" alt="">
+                        <img class="card__image" src="images/catalog/adam-creation.jpg" width="280" height="160"
+                             loading="lazy" alt="Картина Сотворение Адама">
                     </a>
                     <div class="card__info">
-                        <a class="card__link" href="/">
-                            <h2 class="card__title">«Сотворение Адама» <br> Микеланджело</h2>
-                        </a>
+                        <h2 class="card__title">
+                            <a class="card__link" href="/">«Сотворение Адама» <br> Микеланджело</a>
+                        </h2>
                         <div class="card__buy-section">
                             <div class="card__prices">
                                 <p class="card__price price price--old">2 000 000 $</p>
@@ -100,12 +103,13 @@
                 </li>
                 <li class="catalog__item card card--inactive">
                     <a class="card__link" href="/">
-                        <img class="card__image" src="images/catalog/anathomy.jpg" width="150" alt="">
+                        <img class="card__image" src="images/catalog/anathomy.jpg" width="280" height="160"
+                             loading="lazy" alt="Картина Урок Анатомии">
                     </a>
                     <div class="card__info">
-                        <a class="card__link" href="/">
-                            <h2 class="card__title">«Урок анатомии»<br>Рембрандт</h2>
-                        </a>
+                        <h2 class="card__title">
+                            <a class="card__link" href="/">«Урок анатомии»<br>Рембрандт</a>
+                        </h2>
                         <div class="card__buy-section">
                             <p class="card__text-sold text-sold">Продана на аукционе</p>
                         </div>
@@ -123,11 +127,11 @@
                     <img class="navigation__logo logo" src="images/logo.svg" alt="logo">
                 </a>
                 <ul class="navigation__menu menu">
-                    <li class="menu__item"><a class="menu__link">Каталог</a></li>
-                    <li class="menu__item"><a class="menu__link">Доставка</a></li>
-                    <li class="menu__item"><a class="menu__link">Оплата</a></li>
-                    <li class="menu__item"><a class="menu__link">Контакты</a></li>
-                    <li class="menu__item"><a class="menu__link">О галерее</a></li>
+                    <li class="menu__item"><a class="menu__link" href="/">Каталог</a></li>
+                    <li class="menu__item"><a class="menu__link" href="/">Доставка</a></li>
+                    <li class="menu__item"><a class="menu__link" href="/">Оплата</a></li>
+                    <li class="menu__item"><a class="menu__link" href="/">Контакты</a></li>
+                    <li class="menu__item"><a class="menu__link" href="/">О галерее</a></li>
                 </ul>
             </div>
             <address class="footer__contacts contacts">

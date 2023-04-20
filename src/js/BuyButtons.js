@@ -23,7 +23,7 @@ const loader = ({currentTarget}) => {
         });
 };
 
-const initLoader = () => {
+const LoadingButtons = () => {
 
     const buttons = document.querySelectorAll(selectors.button);
 
@@ -33,4 +33,4 @@ const initLoader = () => {
 
 };
 
-window.addEventListener('DOMContentLoaded', initLoader);
+export default LoadingButtons

@@ -68,6 +68,11 @@ h6 {
   @include fluid-text(12, 14, 360, 1920);
 }
 
+a:link, a:visited {
+  color: var(--main-font-color);
+  text-decoration: none;
+}
+
 address {
   font-style: normal;
   @include fluid-text(12, 14, 360, 1920);

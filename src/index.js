@@ -1,4 +1,8 @@
 import './main.scss';
-import './index.html';
-import './js/menu-toggler';
-import './js/button-loader';
+import HeaderToggler from './js/MenuToggler';
+import LoadingButtons  from './js/BuyButtons';
+
+document.addEventListener('DOMContentLoaded', () => {
+    HeaderToggler();
+    LoadingButtons();
+})

@@ -1,3 +1,5 @@
+import BuyButtons from "./BuyButtons";
+
 const selectors = {
     menu: '.menu',
     toggleButton: '.navigation__toggle-button',
@@ -19,20 +21,17 @@ const button = document.querySelector(selectors.toggleButton);
 const toggle = document.querySelector(selectors.toggle);
 
 
-const toggleMenu = () => {
+const HeaderToggler = () => {
 
-    const isClosed = toggle.classList.contains(states.toggle.closed);
+    button.addEventListener('click', () => {
 
-    toggle.classList.toggle(states.toggle.open, isClosed);
-    toggle.classList.toggle(states.toggle.closed, !isClosed);
-    menu.classList.toggle(states.menu.open, isClosed);
+        const isClosed = toggle.classList.contains(states.toggle.closed);
 
+        toggle.classList.toggle(states.toggle.open, isClosed);
+        toggle.classList.toggle(states.toggle.closed, !isClosed);
+        menu.classList.toggle(states.menu.open, isClosed);
+
+    })
 };
 
-const initToggleMenu = () => {
-
-    button.addEventListener('click', toggleMenu);
-
-};
-
-window.addEventListener('DOMContentLoaded', initToggleMenu);
+export default HeaderToggler

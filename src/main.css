@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("normalize.css/normalize.css");
 @import url("scss/font/fonts.scss");
 :root {
@@ -167,6 +168,11 @@ h6 {
   }
 }
 
+a:link, a:visited {
+  color: var(--main-font-color);
+  text-decoration: none;
+}
+
 address {
   font-style: normal;
   font-size: 12px;
@@ -330,7 +336,7 @@ html {
   }
 }
 
-.hidden {
+.visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -341,6 +347,27 @@ html {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+/* clears the ‘X’ from Internet Explorer */
+input[type=search]::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+input[type=search]::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+/* clears the ‘X’ from Chrome */
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {
+  display: none;
 }
 
 .page {
@@ -415,6 +442,10 @@ html {
   z-index: 4;
 }
 .navigation__toggle--open {
+  position: absolute;
+  top: 12px;
+  display: block;
+  z-index: 4;
   top: 22px;
   z-index: 4;
 }
@@ -509,7 +540,7 @@ html {
   display: flex;
   align-items: center;
   flex-grow: 1;
-  padding-left: 2vw;
+  padding: 0 2vw;
   height: auto;
   border: 1px solid var(--stroke-color);
   background-color: transparent;
@@ -577,6 +608,7 @@ html {
 .card__link {
   width: 100%;
   text-decoration: none;
+  font-color: inherit;
 }
 .card__image {
   display: flex;
@@ -631,6 +663,7 @@ html {
 .card__button--incart {
   position: relative;
   padding-left: 28px;
+  background-color: var(--button-secondary-bg-color);
 }
 @media (--tablet) {
   .card__button--incart {
