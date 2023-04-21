@@ -8,8 +8,7 @@ const selectors = {
 
 const states = {
     toggle: {
-        closed: 'navigation__toggle--closed',
-        open: 'navigation__toggle--open'
+        open: 'is-open'
     },
     menu: {
         open: 'menu--open'
@@ -25,11 +24,10 @@ const HeaderToggler = () => {
 
     button.addEventListener('click', () => {
 
-        const isClosed = toggle.classList.contains(states.toggle.closed);
+        const isOpen = toggle.classList.contains(states.toggle.open);
 
-        toggle.classList.toggle(states.toggle.open, isClosed);
-        toggle.classList.toggle(states.toggle.closed, !isClosed);
-        menu.classList.toggle(states.menu.open, isClosed);
+        toggle.classList.toggle(states.toggle.open, !isOpen);
+        menu.classList.toggle(states.menu.open, !isOpen);
 
     })
 };
