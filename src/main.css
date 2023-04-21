@@ -678,6 +678,13 @@ input[type=search]::-webkit-search-results-decoration {
   width: 100%;
   border: 1px solid var(--stroke-color);
 }
+.product-card--inactive {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.product-card--inactive .product-card__inner {
+  pointer-events: none;
+}
 .product-card__inner {
   display: flex;
   flex-direction: column;

@@ -4,6 +4,15 @@
   width: 100%;
   border: 1px solid var(--stroke-color);
 
+  &--inactive {
+    opacity: 0.5;
+    cursor: not-allowed;
+
+    & .product-card__inner {
+      pointer-events: none;
+    }
+  }
+
   &__inner {
     display: flex;
     flex-direction: column;
