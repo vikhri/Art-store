@@ -1,7 +1,10 @@
 .product-card {
   max-width: 280px;
   min-width: 220px;
+  max-height: 328px;
+
   width: 100%;
+  height: 100%;
   border: 1px solid var(--stroke-color);
 
   &--inactive {
@@ -14,9 +17,11 @@
   }
 
   &__inner {
+    height: 100%;
     display: flex;
     flex-direction: column;
     gap: 24px;
+    padding-bottom: 20px;
   }
 
   &__info {
@@ -44,11 +49,12 @@
 
   &__actions {
     display: flex;
+    flex-grow: 1;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 
-    padding: 0 20px 20px;
+    padding: 0 20px;
 
     @media (--tablet) {
       padding: 0 7% 7%;
@@ -67,6 +73,10 @@
   &__old-price {
     text-decoration: line-through;
     color: var(--old-price-font-color);
+  }
+
+  &__alert {
+    display: block;
   }
 
   &__buy-button {
@@ -88,7 +98,6 @@
       }
 
   }
-
   }
 
 .buy-button-icon {
