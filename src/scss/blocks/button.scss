@@ -3,9 +3,17 @@
   justify-content: center;
   align-items: center;
 
-  height: 48px;
-  width: 112px;
-  min-width: 100px;
+  padding: 14px 36px;
+
+  &.has-icon {
+    padding-left: 9px;
+    padding-right: 9px;
+  }
+
+  @media (--tablet) {
+    padding: 12px 24px;
+  }
+
 
   border: none;
   background-color: var(--button-bg-color);
