@@ -9,7 +9,7 @@
   &__contacts {
     display: flex;
     flex-direction: row;
-    column-gap: 48px;
+    column-gap: 72px;
 
     @media (--mobile) {
       flex-direction: column;
@@ -41,8 +41,8 @@
     &:before {
       position: absolute;
       content: " ";
-      top: 3px;
-      left: -20px;
+      top: 4px;
+      left: -24px;
 
       width: 14px;
       height: 14px;

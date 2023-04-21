@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 14px 36px;
+  padding: 13px 36px 14px;
   border: none;
   background-color: var(--button-bg-color);
   color: var(--button-text-color);
