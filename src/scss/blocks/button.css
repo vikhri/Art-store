@@ -2,12 +2,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 48px;
-  width: 112px;
-  min-width: 100px;
+  padding: 14px 36px;
   border: none;
   background-color: var(--button-bg-color);
   color: var(--button-text-color);
+}
+.button.has-icon {
+  padding-left: 9px;
+  padding-right: 9px;
+}
+@media (--tablet) {
+  .button {
+    padding: 12px 24px;
+  }
 }
 .button:hover {
   background-color: var(--button-hover-color);

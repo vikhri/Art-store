@@ -16,17 +16,17 @@
                     <li class="menu__item">
                         <a class="menu__link" href="/">Каталог</a>
                     </li>
-                    <li class="menu__item" href="/">
-                        <a class="menu__link">Доставка</a>
+                    <li class="menu__item">
+                        <a class="menu__link" href="/">Доставка</a>
                     </li>
-                    <li class="menu__item" href="/">
-                        <a class="menu__link">Оплата</a>
+                    <li class="menu__item">
+                        <a class="menu__link" href="/">Оплата</a>
                     </li>
-                    <li class="menu__item" href="/">
-                        <a class="menu__link">Контакты</a>
+                    <li class="menu__item">
+                        <a class="menu__link" href="/">Контакты</a>
                     </li>
-                    <li class="menu__item" href="/">
-                        <a class="menu__link">О галерее</a>
+                    <li class="menu__item">
+                        <a class="menu__link" href="/">О галерее</a>
                     </li>
                 </ul>
             </nav>
@@ -47,73 +47,141 @@
         <section class="catalog">
             <h1 class="catalog__title">Картины Эпохи возрождения</h1>
             <ul class="catalog__list">
-                <li class="catalog__item card">
-                    <a class="card__link" href="/">
-                        <img class="card__image" src="images/catalog/venera.jpg" width="280" height="160" loading="lazy"
-                             alt="Картина Рождение Венеры">
-                    </a>
-                    <div class="card__info">
-                            <h2 class="card__title">
-                                <a class="card__link" href="/">«Рождение Венеры»<br>Сандро Боттичелли</a>
-                            </h2>
-                        <div class="card__buy-section">
-                            <div class="card__prices">
-                                <p class="card__price price price--old">2 000 000 $</p>
-                                <p class="card__price price">1 000 000 $</p>
-                            </div>
-                            <button class="card__button button" type="button" data-product-id="1">Купить</button>
+                <li class="catalog__item">
+                    <article class="product-card">
+                        <div class="product-card__inner">
+                            <figure class="product-card__info">
+                                <a class="product-card__image-wrapper" href="/">
+                                    <img class="product-card__image" src="images/catalog/venera.jpg" width="280" height="160" loading="lazy" alt="Картина Рождение Венеры">
+                                </a>
+                                <h2 class="product-card__title">
+                                    <a class="product-card__title-link" href="/">
+                                        «Рождение Венеры»<br>Сандро Боттичелли
+                                    </a>
+                                </h2>
+                            </figure>
+                            <footer class="product-card__actions">
+                                <div class="product-card__prices">
+                                    <del class="product-card__old-price price--old">2 000 000 $</del>
+                                    <ins class="product-card__new-price price">1 000 000 $</ins>
+                                </div>
+                                <button
+                                        class="product-card__buy-button button"
+                                        type="button"
+                                        data-buy-button='{ "id": 1 }'
+                                >
+                                    <svg class="buy-button-icon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M14.5315 1.80937L5.63341 11.237L1.34814 7.19237" stroke="#F4F6F9"
+                                              stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span class="product-card__buy-button-text button-text">Купить</span>
+                                </button>
+                            </footer>
                         </div>
-                    </div>
+                    </article>
                 </li>
-                <li class="catalog__item card">
-                    <a class="card__link" href="/">
-                        <img class="card__image" src="images/catalog/lords-supper.jpg" width="280" height="150"
-                             loading="lazy" alt="Картина Тайная Вечеря">
-                    </a>
-                    <div class="card__info">
-                        <h2 class="card__title">
-                            <a class="card__link" href="/">«Тайная вечеря» <br> Леонардо да Винчи</a>
-                        </h2>
-                        <div class="card__buy-section">
-                            <div class="card__prices">
-                                <p class="card__price price price--old">2 000 000 $</p>
-                                <p class="card__price price">1 000 000 $</p>
-                            </div>
-                            <button class="card__button button" type="button" data-product-id="2">Купить</button>
+                <li class="catalog__item">
+                    <article class="product-card">
+                        <div class="product-card__inner">
+                            <figure class="product-card__info">
+                                <a class="product-card__image-wrapper" href="/">
+                                    <img class="product-card__image" src="images/catalog/venera.jpg" width="280" height="160" loading="lazy" alt="Картина Рождение Венеры">
+                                </a>
+                                <h2 class="product-card__title">
+                                    <a class="product-card__title-link" href="/">
+                                        «Рождение Венеры»<br>Сандро Боттичелли
+                                    </a>
+                                </h2>
+                            </figure>
+                            <footer class="product-card__actions">
+                                <div class="product-card__prices">
+                                    <del class="product-card__old-price price--old">2 000 000 $</del>
+                                    <ins class="product-card__new-price price">1 000 000 $</ins>
+                                </div>
+                                <button
+                                        class="product-card__buy-button button"
+                                        type="button"
+                                        data-buy-button='{ "id": 1 }'
+                                >
+                                    <svg class="buy-button-icon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M14.5315 1.80937L5.63341 11.237L1.34814 7.19237" stroke="#F4F6F9"
+                                              stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span class="product-card__buy-button-text button-text">Купить</span>
+                                </button>
+                            </footer>
                         </div>
-                    </div>
+                    </article>
                 </li>
-                <li class="catalog__item card">
-                    <a class="card__link" href="/">
-                        <img class="card__image" src="images/catalog/adam-creation.jpg" width="280" height="160"
-                             loading="lazy" alt="Картина Сотворение Адама">
-                    </a>
-                    <div class="card__info">
-                        <h2 class="card__title">
-                            <a class="card__link" href="/">«Сотворение Адама» <br> Микеланджело</a>
-                        </h2>
-                        <div class="card__buy-section">
-                            <div class="card__prices">
-                                <p class="card__price price price--old">2 000 000 $</p>
-                                <p class="card__price price ">1 000 000 $</p>
-                            </div>
-                            <button class="card__button button" type="button" data-product-id="1">Купить</button>
+                <li class="catalog__item">
+                    <article class="product-card">
+                        <div class="product-card__inner">
+                            <figure class="product-card__info">
+                                <a class="product-card__image-wrapper" href="/">
+                                    <img class="product-card__image" src="images/catalog/venera.jpg" width="280" height="160" loading="lazy" alt="Картина Рождение Венеры">
+                                </a>
+                                <h2 class="product-card__title">
+                                    <a class="product-card__title-link" href="/">
+                                        «Рождение Венеры»<br>Сандро Боттичелли
+                                    </a>
+                                </h2>
+                            </figure>
+                            <footer class="product-card__actions">
+                                <div class="product-card__prices">
+                                    <del class="product-card__old-price price--old">2 000 000 $</del>
+                                    <ins class="product-card__new-price price">1 000 000 $</ins>
+                                </div>
+                                <button
+                                        class="product-card__buy-button button"
+                                        type="button"
+                                        data-buy-button='{ "id": 1 }'
+                                >
+                                    <svg class="buy-button-icon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M14.5315 1.80937L5.63341 11.237L1.34814 7.19237" stroke="#F4F6F9"
+                                              stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span class="product-card__buy-button-text button-text">Купить</span>
+                                </button>
+                            </footer>
                         </div>
-                    </div>
+                    </article>
                 </li>
-                <li class="catalog__item card card--inactive">
-                    <a class="card__link" href="/">
-                        <img class="card__image" src="images/catalog/anathomy.jpg" width="280" height="160"
-                             loading="lazy" alt="Картина Урок Анатомии">
-                    </a>
-                    <div class="card__info">
-                        <h2 class="card__title">
-                            <a class="card__link" href="/">«Урок анатомии»<br>Рембрандт</a>
-                        </h2>
-                        <div class="card__buy-section">
-                            <p class="card__text-sold text-sold">Продана на аукционе</p>
+                <li class="catalog__item">
+                    <article class="product-card">
+                        <div class="product-card__inner">
+                            <figure class="product-card__info">
+                                <a class="product-card__image-wrapper" href="/">
+                                    <img class="product-card__image" src="images/catalog/venera.jpg" width="280" height="160" loading="lazy" alt="Картина Рождение Венеры">
+                                </a>
+                                <h2 class="product-card__title">
+                                    <a class="product-card__title-link" href="/">
+                                        «Рождение Венеры»<br>Сандро Боттичелли
+                                    </a>
+                                </h2>
+                            </figure>
+                            <footer class="product-card__actions">
+                                <div class="product-card__prices">
+                                    <del class="product-card__old-price price--old">2 000 000 $</del>
+                                    <ins class="product-card__new-price price">1 000 000 $</ins>
+                                </div>
+                                <button
+                                        class="product-card__buy-button button"
+                                        type="button"
+                                        data-buy-button='{ "id": 1 }'
+                                >
+                                    <svg class="buy-button-icon" width="16" height="13" viewBox="0 0 16 13" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M14.5315 1.80937L5.63341 11.237L1.34814 7.19237" stroke="#F4F6F9"
+                                              stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span class="product-card__buy-button-text button-text">Купить</span>
+                                </button>
+                            </footer>
                         </div>
-                    </div>
+                    </article>
                 </li>
             </ul>
         </section>

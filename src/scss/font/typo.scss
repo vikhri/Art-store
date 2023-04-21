@@ -83,7 +83,8 @@ address {
   @include fluid-text(14, 16, 360, 1920);
 }
 
-.button {
+.button,
+.button-text {
   @include bold-font;
   color: var(--button-text-color);
   @include fluid-text(12, 14, 360, 1920);
@@ -96,7 +97,6 @@ address {
   &--old {
     @include light-font;
     @include fluid-text(12, 14, 360, 1920);
-
     text-decoration: line-through;
     color: var(--old-price-font-color);
   }

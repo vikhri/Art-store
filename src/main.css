@@ -210,7 +210,8 @@ address {
   }
 }
 
-.button {
+.button,
+.button-text {
   font-family: "Merriweather", "Arial", serif;
   font-weight: 700;
   color: var(--main-font-color);
@@ -219,14 +220,16 @@ address {
   font-size: 12px;
 }
 @media (min-width: 360px) {
-  .button {
+  .button,
+.button-text {
     font-size: calc(
             12px + 2 * (100vw - 360px) / (1920 - 360)
     );
   }
 }
 @media (min-width: 1920px) {
-  .button {
+  .button,
+.button-text {
     font-size: 14px;
   }
 }
@@ -293,14 +296,22 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 48px;
-  width: 112px;
-  min-width: 100px;
+  padding: 14px 36px;
   border: none;
   background-color: var(--button-bg-color);
   color: var(--button-text-color);
 }
 
+.button.has-icon {
+  padding-left: 9px;
+  padding-right: 9px;
+}
+
+@media (--tablet) {
+  .button {
+    padding: 12px 24px;
+  }
+}
 .button:hover {
   background-color: var(--button-hover-color);
 }
@@ -594,99 +605,6 @@ input[type=search]::-webkit-search-results-decoration {
   }
 }
 
-.card {
-  display: flex;
-  flex-direction: column;
-  max-width: 280px;
-  min-width: 220px;
-  max-height: 328px;
-  border: 1px solid var(--stroke-color);
-}
-.card--inactive {
-  opacity: 0.5;
-}
-.card__link {
-  width: 100%;
-  text-decoration: none;
-  font-color: inherit;
-}
-.card__image {
-  display: flex;
-  width: 100%;
-  height: 20vh;
-  max-height: 160px;
-  object-fit: cover;
-}
-.card__info {
-  display: flex;
-  flex-grow: 1;
-  flex-direction: column;
-  row-gap: 22px;
-  padding: 20px 24px 24px;
-}
-@media (--tablet) {
-  .card__info {
-    padding: 7%;
-  }
-}
-.card__buy-section {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-.card__button {
-  max-width: 118px;
-}
-@media (--tablet) {
-  .card__button {
-    max-width: 105px;
-  }
-}
-.card__button--loader {
-  color: transparent;
-}
-.card__button--loader::after {
-  position: relative;
-  top: 0;
-  bottom: 0;
-  right: 25%;
-  content: "";
-  width: 18px;
-  height: 18px;
-  margin: auto;
-  border: 3px solid white;
-  border-top-color: transparent;
-  border-radius: 50%;
-  animation: button-loading-spinner 1s ease infinite;
-}
-.card__button--incart {
-  position: relative;
-  padding-left: 28px;
-  background-color: var(--button-secondary-bg-color);
-}
-@media (--tablet) {
-  .card__button--incart {
-    padding-left: 10%;
-  }
-}
-.card__button--incart::before {
-  position: absolute;
-  top: 16px;
-  left: 10px;
-  content: " ";
-  width: 20px;
-  height: 20px;
-  background-image: url("././images/icons/check-mark.svg");
-  background-repeat: no-repeat;
-}
-@media (--tablet-xs) {
-  .card__button--incart::before {
-    width: 15px;
-    height: 15px;
-  }
-}
-
 .footer {
   display: flex;
   flex-direction: row;
@@ -752,6 +670,80 @@ input[type=search]::-webkit-search-results-decoration {
   .contacts__address:before {
     display: none;
   }
+}
+
+.product-card {
+  max-width: 280px;
+  min-width: 220px;
+  width: 100%;
+  border: 1px solid var(--stroke-color);
+}
+.product-card__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.product-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.product-card__image {
+  width: 100%;
+  height: 20vh;
+  max-height: 160px;
+  object-fit: cover;
+}
+.product-card__title {
+  padding: 0 20px;
+}
+@media (--tablet) {
+  .product-card__title {
+    padding: 0 7%;
+  }
+}
+.product-card__actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px 20px;
+}
+@media (--tablet) {
+  .product-card__actions {
+    padding: 0 7% 7%;
+  }
+}
+.product-card__prices {
+  display: flex;
+  flex-direction: column;
+}
+.product-card__new-price {
+  text-decoration: none;
+}
+.product-card__old-price {
+  text-decoration: line-through;
+  color: var(--old-price-font-color);
+}
+.product-card__buy-button {
+  max-width: 118px;
+  display: flex;
+  flex-direction: row;
+  gap: 7px;
+  justify-content: center;
+  align-items: baseline;
+}
+@media (--tablet) {
+  .product-card__buy-button {
+    gap: 4px;
+  }
+}
+.product-card__buy-button:not(.has-icon) .buy-button-icon {
+  display: none;
+}
+
+.buy-button-icon {
+  align-self: normal;
 }
 
 /*# sourceMappingURL=main.css.map */
