@@ -22,12 +22,12 @@
 @mixin fluid-text($font-min, $font-max, $screen-min, $screen-max) {
   font-size: #{$font-min}px;
 
-  @media   (min-width: #{$screen-min}px) {
+  @media (min-width: #{$screen-min}px) {
     font-size: calc(
             #{$font-min}px + #{($font-max - $font-min)} * (100vw - #{$screen-min}px) / (#{$screen-max} - #{$screen-min})
     );
   }
-  @media   (min-width: #{$screen-max}px) {
+  @media (min-width: #{$screen-max}px) {
     font-size: #{$font-max}px;
   }
 }

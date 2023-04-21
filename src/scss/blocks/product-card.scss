@@ -95,12 +95,12 @@
     @media (--tablet) {
       gap: 4px;
     }
-          &:not(.has-icon) {
-        .buy-button-icon {
-          display: none;
-        }
-      }
 
+    &:not(.has-icon) {
+      .buy-button-icon {
+        display: none;
+      }
+    }
   }
-  }
+}
 

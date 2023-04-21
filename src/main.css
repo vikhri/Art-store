@@ -604,7 +604,7 @@ input[type=search]::-webkit-search-results-decoration {
 }
 @media (--mobile) {
   .catalog {
-    padding-top: 10vh;
+    padding-top: 90px;
   }
 }
 .catalog__title {
