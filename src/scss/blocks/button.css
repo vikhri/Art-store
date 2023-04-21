@@ -26,4 +26,26 @@
   background-color: var(--button-bg-color);
 }
 
+.is-loading {
+  color: transparent;
+}
+.is-loading::after {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  right: 25%;
+  content: "";
+  width: 18px;
+  height: 18px;
+  margin: auto;
+  border: 3px solid white;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: button-loading-spinner 1s ease infinite;
+}
+
+.in-cart {
+  background-color: var(--button-secondary-bg-color);
+}
+
 /*# sourceMappingURL=button.css.map */
