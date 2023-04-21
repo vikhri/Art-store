@@ -26,17 +26,23 @@
   background-color: var(--button-bg-color);
 }
 
-.is-loading {
+.in-cart {
+  background-color: var(--button-secondary-bg-color);
+}
+
+.is-loading > span {
   color: transparent;
 }
+
 .is-loading::after {
-  position: relative;
-  top: 0;
-  bottom: 0;
-  right: 25%;
   content: "";
-  width: 18px;
-  height: 18px;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   margin: auto;
   border: 3px solid white;
   border-top-color: transparent;
@@ -44,8 +50,13 @@
   animation: button-loading-spinner 1s ease infinite;
 }
 
-.in-cart {
-  background-color: var(--button-secondary-bg-color);
+@keyframes button-loading-spinner {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
 }
 
 /*# sourceMappingURL=button.css.map */
